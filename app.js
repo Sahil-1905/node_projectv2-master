@@ -21,6 +21,12 @@ app.post('/user/:id', (req, res) =>{
   res.send(`The user id is: ${user_id}`);
 });
 
+//route handler
+app.get('/search',(req, res)=>{
+    const query = req.query.q;
+    res.send(`This is the search term entered: ${query}`);
+});
+
 
 //start our server
 app.listen(PORT, () =>{
